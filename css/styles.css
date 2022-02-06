@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap');
+
+body {
+	background: #DDEEFC;
+
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+.card {
+	position: relative;
+
+	width: 100%;
+	max-width: 430px;
+	margin: 0 auto;
+
+	color: white;
+	outline: 1px solid red;
+}
+
+.card__side {
+	height: 270px;
+	padding: 15px 25px;
+
+	transform: perspective(2000px)
+	rotateY(0deg)
+	rotateX(0deg)
+	rotate(0deg);
+
+	border-radius: 15px;
+	box-shadow: 0 20px 60px 0 rgb(14 42 90 / 55%);
+
+	transform-style: preserve-3d;
+}
+
+.card__front {
+	background: teal;
+}
+
+.card__back {
+	background: darkblue;
+}
+
+.card__chip {
+	height: 48px;
+}
+
+.card__logo {
+	height: 45px;
+}
+
+.form {
+	max-width: 650px;
+	margin: 0 auto;
+	margin-top: -90px;
+	padding: 35px;
+	padding-top: 180px;
+
+	border-radius: 10px;
+	background: #FFFFFF;
+	box-shadow: 0 30px 60px 0 rgb(90 116 148 / 40%);
+}
+.hidden {
+	display: none;
+	visibility: hidden;
+}
