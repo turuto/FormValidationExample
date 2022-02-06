@@ -17,7 +17,7 @@
             <img class="card__logo" src="img/visa.png" alt="visa logo">
             <div></div>
             <div class="card__logo"></div>
-            <div class="card__numbers">
+            <div class="card__numbers" data-corresponding="cardNumber">
                 <span class="card__numberGroup">
                     <span class="card__number">#</span>
                     <span class="card__number">#</span>
@@ -43,35 +43,49 @@
                     <span class="card__number">#</span>
                 </span>
             </div>
-            <div class="card__holder">
+            <div class="card__holder" data-corresponding="cardHolder">
                 <div class="card__label">Card Holder</div>
                 <div class="card__field">Full Name</div>
             </div>
             <div class="card__expires">
                 <div class="card__label">Expires</div>
-                <div class="card__field">MM/YY</div>
+                <div class="card__field" data-corresponding="expires">MM/YY</div>
             </div>
 
         </div>
         <div class="card__side card__back hidden">
             <div class="card__band"></div>
-            <div class="card__cvv">
+            <div class="card__cvv" data-corresponding="cvv">
                 <div class="card__label">CVV</div>
                 <div class="card__field"></div>
             </div>
             <img class="card__logo" src="img/visa.png" alt="visa logo">
         </div>
     </div>
-    <form action="" class="form">
-        <label for="cardNumber">Card Number</label>
-        <input type="number" id="cardNumber" name="cardNumber">
-        <label for="cardHolder">Card Holder</label>
-        <input type="text" id="cardHolders" name="cardNumber">
-        <label for=""></label><select name="" id=""></select>
-        <label for="cvv">CVV</label>
-        <input type="text" id="cvv" name="cvv">
-        <button type="submit">Submit</button>
+    <form id="cardForm" action="" class="form">
+        <div class="form__item">
+            <label for="cardNumber">Card Number</label>
+            <input type="number" id="cardNumber" name="cardNumber">
+            <p class="form__error"></p>
+        </div>
+        <div class="form__item">
+            <label for="cardHolder">Card Holder</label>
+            <input type="text" id="cardHolder" name="cardNumber">
+            <p class="form__error"></p>
+        </div>
+        <div class="form__item">
+            <label for="expires"></label>
+            <input type="month" id="expires" name="expires" max="2032-12">
+            <p class="form__error"></p>
+        </div>
+        <div class="form__item">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv">
+            <p class="form__error"></p>
+        </div>
+        <button type="submit" class="form__submitBtn">Submit</button>
     </form>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

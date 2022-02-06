@@ -60,6 +60,9 @@ body {
 	background: #FFFFFF;
 	box-shadow: 0 30px 60px 0 rgb(90 116 148 / 40%);
 }
+.form__item {
+	border: 1px solid red;
+}
 .hidden {
 	display: none;
 	visibility: hidden;
